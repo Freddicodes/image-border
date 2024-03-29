@@ -39,7 +39,11 @@ def transform(factor: float, name: str) -> np.ndarray:
     return result
 
 
-def setup():
+def setup() -> tuple:
+    """
+    Set up the argument parser and return the arguments.
+    :rtype: tuple
+    """
     parser = argparse.ArgumentParser(description="Take an image as input and add a white border to it.")
     parser.add_argument("-f", "--factor", type=float, default=1.1,
                         help="The parameter specifies how much the new image size is scaled up.")
